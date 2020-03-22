@@ -1,5 +1,6 @@
 package FooBar;
 
+import java.util.ArrayList;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 
@@ -11,7 +12,9 @@ public class FooBar {
     public FooBar(final int n) {
         this.n = n;
         barQueue = new LinkedBlockingDeque<>();
-        fooQueue = new LinkedBlockingDeque<>();
+        ArrayList<Integer> arrayList=new ArrayList<>();
+        arrayList.add(0);
+        fooQueue = new LinkedBlockingDeque<>(arrayList);
     }
 
     public void foo(final Runnable printFoo) throws InterruptedException {
